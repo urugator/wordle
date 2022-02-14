@@ -1,0 +1,39 @@
+.gameGrid-row {
+  width: 600px;
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.gameGrid-cell {
+  background-color: rgb(18, 18, 19);
+  color: #fff;
+  font-size: 3rem;
+  display: flex;
+  flex: 1 1 0px;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(58, 58, 60);
+}
+
+.gameGrid-cell::before {
+  content: '';
+  display: inline-block;
+  padding-bottom: 100%;
+}
+
+.gameGrid-cell.focus {
+  outline: 1px solid blue;
+}
+
+.gameGrid-cell.incorrect {
+  background-color: rgb(58, 58, 60);
+}
+
+.gameGrid-cell.partiallyCorrect {
+  background-color: rgba(181,159,59);
+}
+
+.gameGrid-cell.fullyCorrect {
+  background-color: rgba(83, 141, 78)
+}

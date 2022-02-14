@@ -1,0 +1,6 @@
+<p>game-grid works!</p>
+<div  *ngFor="let row of stateService.rows$ | async; index as rowIndex" class="gameGrid-row">
+  <div *ngFor="let cell of row; index as cellIndex" class="gameGrid-cell {{ (isCellFocused(rowIndex, cellIndex) | async) ? 'focus' : '' }} {{ getCorrectnessClass(rowIndex, cellIndex) | async }}"  >
+    {{ cell.value }}
+  </div>  
+</div>
